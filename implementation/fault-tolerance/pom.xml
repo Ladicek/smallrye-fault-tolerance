@@ -52,6 +52,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>stilldi</groupId>
+            <artifactId>stilldi-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.eclipse.microprofile.fault-tolerance</groupId>
             <artifactId>microprofile-fault-tolerance-api</artifactId>
         </dependency>

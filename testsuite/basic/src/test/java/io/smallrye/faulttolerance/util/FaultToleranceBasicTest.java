@@ -9,12 +9,12 @@ import org.jboss.weld.junit5.auto.AddExtensions;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import io.smallrye.config.inject.ConfigExtension;
-import io.smallrye.faulttolerance.FaultToleranceExtension;
 import io.smallrye.metrics.setup.MetricCdiInjectionExtension;
+import stilldi.impl.StillDI;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE, ElementType.METHOD })
 @ExtendWith(WeldWithFaultToleranceExtension.class)
-@AddExtensions({ FaultToleranceExtension.class, ConfigExtension.class, MetricCdiInjectionExtension.class })
+@AddExtensions({ StillDI.class, ConfigExtension.class, MetricCdiInjectionExtension.class })
 public @interface FaultToleranceBasicTest {
 }

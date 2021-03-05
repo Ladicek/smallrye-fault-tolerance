@@ -25,7 +25,7 @@ import org.jboss.weld.junit5.auto.AddBeanClasses;
 import org.junit.jupiter.api.Test;
 import org.junitpioneer.jupiter.SetSystemProperty;
 
-import io.smallrye.faulttolerance.FaultToleranceOperations;
+import io.smallrye.faulttolerance.FaultToleranceOperationProvider;
 import io.smallrye.faulttolerance.config.FaultToleranceOperation;
 import io.smallrye.faulttolerance.config.RetryConfig;
 import io.smallrye.faulttolerance.util.FaultToleranceBasicTest;
@@ -35,7 +35,7 @@ import io.smallrye.faulttolerance.util.FaultToleranceBasicTest;
 @AddBeanClasses(FaultyService.class)
 public class ConfigParameterPriorityTest {
     @Inject
-    FaultToleranceOperations ops;
+    FaultToleranceOperationProvider ops;
 
     @Test
     public void testConfig() throws NoSuchMethodException, SecurityException {
